@@ -1,26 +1,34 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import {Box, Typography} from '@mui/material';
+import backgroundImage from "../src/assets/images/pattern-bg-desktop.png";
+import InputField from "./components/InputField";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    return (
+        <Box sx={{
+            height: '100vh',
+            width: '100vw',
+            display: 'flex',
+            flexDirection: 'column',
+            backgroundImage: `url(${backgroundImage})`,
+            backgroundSize: 'cover'
+        }}>
+            <Box sx={{flex: '0 0 30%'}}>
+                <InputField/>
+            </Box>
+            <Box sx={{flex: '1 0 70%'}}>
+            </Box>
+        </Box>
+    );
 }
 
 export default App;
+
+
+
+
+
+
+
+
+
