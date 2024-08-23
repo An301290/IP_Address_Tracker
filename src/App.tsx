@@ -1,7 +1,9 @@
 import React from 'react';
-import {Box, Typography} from '@mui/material';
+import 'leaflet/dist/leaflet.css';
+import {Box} from '@mui/material';
 import backgroundImage from "../src/assets/images/pattern-bg-desktop.png";
 import InputField from "./components/InputField";
+import Map from "./components/Map";
 
 function App() {
     return (
@@ -17,6 +19,7 @@ function App() {
                 <InputField/>
             </Box>
             <Box sx={{flex: '1 0 70%'}}>
+                <Map/>
             </Box>
         </Box>
     );
