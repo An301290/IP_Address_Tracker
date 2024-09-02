@@ -13,6 +13,24 @@ export const paperStyle = {
     borderRadius: '4px',
 };
 
+
+export const paperStyleDisplayField = {
+    display: 'flex',
+    alignItems: 'center',
+    flexDirection: {xs: 'column', sm: 'row'},
+    width: {xs: '50%', sm: 700, md: 800},
+    height: {xs: '40%', sm: 100, md: 90},
+    borderRadius: '5px',
+    position: 'fixed',
+    zIndex: 9999,
+    top: {xs: '180px', sm: 200, md: 200},
+    left: {xs: '90px', sm: 'calc(50% - 350px)', md: 'calc(50% - 400px)'},
+};
+
+export const dividerStyle = {
+    height: 28, m: 0.5, display: {xs: 'none', sm: 'block'}
+};
+
 export const inputBaseStyle = {
     ml: 1,
     flex: 1,

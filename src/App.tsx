@@ -4,6 +4,7 @@ import {Box} from '@mui/material';
 import backgroundImage from "../src/assets/images/pattern-bg-desktop.png";
 import InputField from "./components/InputField";
 import Map from "./components/Map";
+import DisplayField from "./components/DisplayField";
 
 function App() {
     return (
@@ -13,12 +14,14 @@ function App() {
             display: 'flex',
             flexDirection: 'column',
             backgroundImage: `url(${backgroundImage})`,
-            backgroundSize: 'cover'
+            backgroundSize: 'cover',
+            position: 'relative',
         }}>
-            <Box sx={{flex: '0 0 30%'}}>
+            <Box sx={{flex: '0 0 35%'}}>
                 <InputField/>
             </Box>
-            <Box sx={{flex: '1 0 70%'}}>
+            < DisplayField/>
+            <Box sx={{flex: '0 0 65%'}}>
                 <Map/>
             </Box>
         </Box>
