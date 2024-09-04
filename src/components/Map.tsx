@@ -5,14 +5,25 @@ import markerIcon from 'leaflet/dist/images/marker-icon.png';
 import markerIcon2x from 'leaflet/dist/images/marker-icon-2x.png';
 import markerShadow from 'leaflet/dist/images/marker-shadow.png';
 
+type MapsProps = {
+    data: {
+        location?: {
+            lat?: number
+            lng?: number
+        }
+    }
+};
+
 L.Icon.Default.mergeOptions({
     iconUrl: markerIcon,
     iconRetinaUrl: markerIcon2x,
     shadowUrl: markerShadow,
 });
 
-const Map = () => {
-    const position: [number, number] = [52.520, 13.405];
+const Map: React.FC<MapsProps> = ({data}) => {
+    const longitude = data.location?.lng ?? -99.1276;
+    const latitude = data.location?.lat ?? 19.4285;
+    const position: [number, number] = [latitude, longitude];
     return (
         <MapContainer center={position} zoom={13} style={{height: '100%', width: '100%'}}>
             <TileLayer

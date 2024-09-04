@@ -1,3 +1,6 @@
+import backgroundImage from "./assets/images/pattern-bg-desktop.png";
+
+
 export const boxStyle = {
     display: 'flex',
     flexDirection: 'column',
@@ -13,7 +16,6 @@ export const paperStyle = {
     borderRadius: '4px',
 };
 
-
 export const paperStyleDisplayField = {
     display: 'flex',
     alignItems: 'center',
@@ -28,7 +30,7 @@ export const paperStyleDisplayField = {
 };
 
 export const dividerStyle = {
-    height: 28, m: 0.5, display: {xs: 'none', sm: 'block'}
+    height: 45, m: 0.5, display: {xs: 'none', sm: 'block'}
 };
 
 export const inputBaseStyle = {
