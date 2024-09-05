@@ -17,6 +17,7 @@ export const paperStyle = {
 };
 
 export const paperStyleDisplayField = {
+    mt: 1,
     display: 'flex',
     alignItems: 'center',
     flexDirection: {xs: 'column', sm: 'row'},

@@ -10,6 +10,7 @@ type MapsProps = {
         location?: {
             lat?: number
             lng?: number
+            region?: string
         }
     }
 };
@@ -23,6 +24,7 @@ L.Icon.Default.mergeOptions({
 const Map: React.FC<MapsProps> = ({data}) => {
     const longitude = data.location?.lng ?? -99.1276;
     const latitude = data.location?.lat ?? 19.4285;
+    const region = data.location?.region ?? 'Mexico';
     const position: [number, number] = [latitude, longitude];
     return (
         <MapContainer center={position} zoom={13} style={{height: '100%', width: '100%'}}>
@@ -32,7 +34,7 @@ const Map: React.FC<MapsProps> = ({data}) => {
             />
             <Marker position={position}>
                 <Popup>
-                    {position}
+                    {region}
                 </Popup>
             </Marker>
         </MapContainer>

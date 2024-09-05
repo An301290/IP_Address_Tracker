@@ -9,32 +9,36 @@ type InputProps = {
     handleInputChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
     handleSubmit: (event: React.FormEvent<HTMLFormElement>) => void;
     ipAddress: string;
-
+    validApiAddress: boolean
+    error: string
 };
 
 
-const InputField: React.FC<InputProps> = ({handleInputChange, handleSubmit, ipAddress}) => {
+const InputField: React.FC<InputProps> = ({handleInputChange, handleSubmit, validApiAddress, error}) => {
     return (
         <Box sx={boxStyle}>
             <Typography mt={5} mb={5} variant="h4" color={"white"} align="center" fontFamily="Rubik, sans-serif">
                 IP Address Tracker
             </Typography>
-            <form onClick={handleSubmit}>
-                <Paper
-                    component="form"
-                    sx={paperStyle}
-                >
-                    <InputBase
-                        sx={inputBaseStyle}
-                        placeholder="Search for any IP address or domain"
-                        onChange={handleInputChange}
-                    />
+            <Paper
+                sx={paperStyle}
+            >
+                <InputBase
+                    sx={inputBaseStyle}
+                    placeholder="Search for any IP address or domain"
+                    onChange={handleInputChange}
+                    error={validApiAddress}
+                />
+
+                <form onClick={handleSubmit}>
                     <IconButton sx={iconButtonStyle} type="submit">
                         <ArrowForwardIosIcon fontSize="small"/>
                     </IconButton>
-
-                </Paper>
-            </form>
+                </form>
+            </Paper>
+            {validApiAddress && (
+                <Typography color={validApiAddress ? "white" : "textPrimary"}>{error}</Typography>
+            )}
         </Box>
 
     );
