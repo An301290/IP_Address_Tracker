@@ -1,6 +1,3 @@
-import backgroundImage from "./assets/images/pattern-bg-desktop.png";
-
-
 export const boxStyle = {
     display: 'flex',
     flexDirection: 'column',

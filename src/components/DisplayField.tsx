@@ -3,7 +3,7 @@ import {Box, Paper} from '@mui/material';
 import InputBase from "@mui/material/InputBase";
 import InputLabel from "@mui/material/InputLabel";
 import Divider from "@mui/material/Divider";
-import {dividerStyle, paperStyle, paperStyleDisplayField} from "../styles/styles";
+import {dividerStyle, paperStyleDisplayField} from "../styles/styles";
 
 type DisplayFieldProps = {
     data: {
