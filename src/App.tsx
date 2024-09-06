@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react';
+import React, {useState} from 'react';
 import 'leaflet/dist/leaflet.css';
 import {Box} from '@mui/material';
 import LinearProgress from '@mui/material/LinearProgress';
