@@ -2,7 +2,7 @@ import React, {useState, useEffect} from 'react';
 import 'leaflet/dist/leaflet.css';
 import {Box} from '@mui/material';
 import LinearProgress from '@mui/material/LinearProgress';
-import backgroundImage from "../src/assets/images/pattern-bg-desktop.png";
+import backgroundImage from "./images/pattern-bg-desktop.png";
 import InputField from "./components/InputField";
 import Map from "./components/Map";
 import DisplayField from "./components/DisplayField";
